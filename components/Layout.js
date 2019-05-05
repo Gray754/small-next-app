@@ -7,6 +7,13 @@ const Layout = (props) => {
             <Navbar/>
             {props.children}
             <Footer/>
+            <style global jsx>{`
+                *{
+                    margin: 0;
+                    padding: 0;
+                    font-family: helvetica;
+                }
+            `}</style>
         </div>
     )
 }
