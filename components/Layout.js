@@ -3,15 +3,23 @@ import Footer from './Footer'
 
 const Layout = (props) => {
     return(
-        <div>
+        <div className='body'>
             <Navbar/>
-            {props.children}
+            <div className='container'>
+                {props.children}
+            </div>
             <Footer/>
             <style global jsx>{`
                 *{
                     margin: 0;
                     padding: 0;
                     font-family: helvetica;
+                }
+                .container{
+                    min-height: 90vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
             `}</style>
         </div>
