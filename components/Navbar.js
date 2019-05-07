@@ -1,16 +1,24 @@
+import Link from 'next/link';
+
 const Navbar = () => {
   return (
     <div className='navbar-container'>
       <h2>Next.js</h2>
       <ul>
         <li>
-          <a href='/index'>Home</a>
+          <Link href='/index'>
+            <a>Home</a>
+          </Link>
         </li>
         <li>
-          <a href='/products'>Superheros</a>
+          <Link href='/products'>
+            <a>Superhero Gallery</a>
+          </Link>
         </li>
         <li>
-          <a href='/about'>About</a>
+          <Link href='/about'>
+            <a>About</a>
+          </Link>
         </li>
       </ul>
       <style jsx>{`

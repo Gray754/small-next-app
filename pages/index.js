@@ -1,4 +1,5 @@
 import Layout from '../components/Layout';
+import Link from 'next/link';
 
 const Index = () => {
   return (
@@ -9,6 +10,10 @@ const Index = () => {
           This is a <span>paragraph</span>. I styled this using <span>jsx</span>
           .
         </p>
+        <Link href='/products'>
+          <button>Superhero Gallery</button>
+        </Link>
+        <p className='smallText'>Did I also mention I like superheroes?</p>
         <style jsx>{`
           .indexContainer {
             text-align: center;
@@ -20,12 +25,32 @@ const Index = () => {
           }
           p {
             font-weight: 300;
+            padding-bottom: 1rem;
+          }
+          .smallText {
+            padding-top: 0.3rem;
+            font-size: 0.7rem;
           }
           span {
             color: green;
           }
           span:nth-child(2n) {
             color: blue;
+          }
+          button {
+            padding: 1rem 3rem;
+            background: none;
+            border: 2px solid #387780;
+            border-radius: 0.3rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #387780;
+            transition: 0.3s ease-out;
+            cursor: pointer;
+          }
+          button:hover {
+            background: #387780;
+            color: #fff;
           }
         `}</style>
       </div>
